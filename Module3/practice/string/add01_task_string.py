@@ -7,4 +7,17 @@ text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat
 # Примечание: для генериации текста можете воспользоваться сайтом: https://ru.lipsum.com/
 # Примечание: обратите внимание на перенос длинной строки на новую строку
 
-# TODO: your code here
+i = 0
+symbol = 0
+word = 0
+length_string = len(text)
+
+while i < length_string:
+    if text[i] != " " and text[i] != "." and text[i] != "," and text[i] != "!" and text[i] != "?" and text[i] != "-":
+        symbol += 1
+    else:
+        symbol = 0
+    if symbol == 8:
+        word += 1
+    i += 1
+print("Number of words per line =", word)
