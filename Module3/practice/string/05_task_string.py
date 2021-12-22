@@ -4,5 +4,16 @@
 
 # Пример строки перевертыша: "И темен город. Мороз узором дорог не мети."
 
-# TODO: your code here
+text = "итеменгородморозузоромдорогнемети"
 
+i = 0
+leight_string = len(text)
+j = leight_string // 2 - 1
+
+while i <= j:
+    if text[i] != text[leight_string - 1 - i]:
+        print("Строка не является перевертышем")
+        i = j + 1
+    i += 1
+if i == j + 1:
+    print("Строка является перевертышем")
